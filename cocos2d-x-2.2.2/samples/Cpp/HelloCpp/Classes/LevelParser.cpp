@@ -16,7 +16,7 @@ LevelParser::~LevelParser(void)
 {
 }
 
-void LevelParser::GetLevelFromJson(const char* fileName)
+void LevelParser::GetQuizesFromJson(const char* fileName)
 {
 	unsigned long filesize = 0;
 	std::string content;
@@ -31,57 +31,18 @@ void LevelParser::GetLevelFromJson(const char* fileName)
   Document document;
   document.Parse<0>(clearData.c_str());
   
-  if(document.HasMember("level"))
+  if(document.HasMember("quizes"))
   {
-	  const Value& level = document["level"];
+	  const Value& level = document["quizes"];
 
-	  if(level.IsObject())
-	  {
-		  const Value& tilesArr = level["tiles"];
-		  assert(tilesArr.IsArray());
+		for(size_t i = 0; i < level.Size(); ++i)
+		{
+			const Value& quiz = level[i];
+			std::pair<std::string, std::string> quizPair;
+			quizPair.first = quiz["question"].GetString();
+			quizPair.second = quiz["answer"].GetString();
 
-		  for(size_t i = 0; i < tilesArr.Size(); ++i)
-		  {
-			  auto loadpath = tilesArr[i].GetString();
-			  tileContainer.push_back(loadpath);
-		  }
-
-		  this->levelWidth = level["width"].GetInt();
-		  this->levelHeight = level["height"].GetInt();
-
-		  const Value& map = level["map"];
-		  assert(map.IsArray());
-		  {
-			  for(size_t i = 0; i < map.Size(); ++i)
-			  {
-				  auto index = map[i].GetInt();
-				  
-				  levelGround.push_back(CCSprite::create(tileContainer[index]));
-			  }
-		  }
-	  }
+			quizes.push_back(quizPair);
+		}
   }
-
-
-}
-
-void LevelParser::AddGroundToLayer(const CCLayer* layer)
-{
-	int x = 0;
-	int y = 0;
-
-	for(int i = 0; i < levelGround.size(); ++i)
-	{
-		levelGround[i]->setPosition(ccp(x,y));
-		if(i % levelWidth == 0)
-		{
-			x = 0;
-		}
-		else
-		{
-			x += (levelGround[i]->boundingBox().getMaxX() - levelGround[i]->boundingBox().getMinX());
-		}
-
-
-	}
 }

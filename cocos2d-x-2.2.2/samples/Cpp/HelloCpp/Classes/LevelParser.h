@@ -9,14 +9,14 @@ public:
 	LevelParser(void);
 	~LevelParser(void);
 
-	void GetLevelFromJson(const char* fileName);
-	void AddGroundToLayer(const CCLayer* layer);
-	
+	void GetQuizesFromJson(const char* fileName);
+
+	inline int CountAvailableQuizes() const
+	{
+		return quizes.size();
+	}
+
 private:
-	std::vector<const char*> tileContainer;
-	std::vector<CCSprite*> levelGround;
-	int levelWidth;
-	int levelHeight;
-	
+	std::vector<std::pair<std::string, std::string>> quizes;
 };
 

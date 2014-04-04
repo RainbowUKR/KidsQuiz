@@ -58,7 +58,8 @@ bool HelloWorld::init()
     // add a label shows "Hello World"
     // create and initialize a label
     
-    CCLabelTTF* pLabel = CCLabelTTF::create("Hello World", "Arial", TITLE_FONT_SIZE);
+	
+    CCLabelTTF* pLabel = CCLabelTTF::create("Available quizes: ", "Arial", TITLE_FONT_SIZE);
     
     // position the label on the center of the screen
     pLabel->setPosition(ccp(origin.x + visibleSize.width/2,
@@ -68,17 +69,23 @@ bool HelloWorld::init()
     this->addChild(pLabel, 1);
 
     // add "HelloWorld" splash screen"
-    CCSprite* pSprite = CCSprite::create("asphalt_tile_i.png");
+    //CCSprite* pSprite = CCSprite::create("asphalt_tile_i.png");
 
 	// position the sprite on the center of the screen
-    pSprite->setPosition(ccp(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+   // pSprite->setPosition(ccp(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
 
     // add the sprite as a child to this layer
-    this->addChild(pSprite, 0);
+   // this->addChild(pSprite, 0);
     
 	LevelParser levelparser;
-	levelparser.GetLevelFromJson("test_level.json");
+	levelparser.GetQuizesFromJson("test_level.json");
 
+	char s[30];
+	sprintf(s, "Available quizes: %d", levelparser.CountAvailableQuizes());
+	
+	CCLabelTTF* avQuizesLbl = CCLabelTTF::create(s, "Arial", TITLE_FONT_SIZE);
+	  avQuizesLbl->setPosition(ccp(origin.x,
+                            origin.y + visibleSize.height - 100));
     return true;
 }
 

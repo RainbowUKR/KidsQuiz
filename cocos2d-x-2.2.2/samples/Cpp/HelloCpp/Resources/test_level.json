@@ -1,12 +1,12 @@
 {
-"level":
-		{
-		  "tiles": ["asphalt_tile_i.png", "send_tile1_i.png", "send_tile2_i.png"],
-		  "width": 4,
-		  "height": 4,
-		  "map":[0, 1, 1 , 2,
-				  0, 1, 1, 2,
-				  0, 1, 1, 2,
-				  0, 1, 1, 2]
-		}
+    "quizes": [
+        {
+            "question": "This is test question.Long-long test question,to test out system",
+            "answer": "Longanswer"
+        },
+        {
+            "question": "2 second question test second question cat dog table smart",
+            "answer": "secondanswer"
+        }
+    ]
 }
