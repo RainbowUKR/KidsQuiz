@@ -34,6 +34,7 @@ namespace gui {
 *   @js NA
 *   @lua NA
 */
+
 class Margin
 {
 public:

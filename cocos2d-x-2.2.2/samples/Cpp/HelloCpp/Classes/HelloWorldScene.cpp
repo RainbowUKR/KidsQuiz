@@ -2,6 +2,7 @@
 #include "AppMacros.h"
 #include "include\cocos2d.h"
 #include "LevelParser.h"
+#include "..\extensions\CocoStudio\GUI\System\CocosGUI.h"
 USING_NS_CC;
 
 
@@ -58,16 +59,6 @@ bool HelloWorld::init()
     // add a label shows "Hello World"
     // create and initialize a label
     
-	
-    CCLabelTTF* pLabel = CCLabelTTF::create("Available quizes: ", "Arial", TITLE_FONT_SIZE);
-    
-    // position the label on the center of the screen
-    pLabel->setPosition(ccp(origin.x + visibleSize.width/2,
-                            origin.y + visibleSize.height - pLabel->getContentSize().height));
-
-    // add the label as a child to this layer
-    this->addChild(pLabel, 1);
-
     // add "HelloWorld" splash screen"
     //CCSprite* pSprite = CCSprite::create("asphalt_tile_i.png");
 
@@ -86,6 +77,8 @@ bool HelloWorld::init()
 	CCLabelTTF* avQuizesLbl = CCLabelTTF::create(s, "Arial", TITLE_FONT_SIZE);
 	  avQuizesLbl->setPosition(ccp(origin.x,
                             origin.y + visibleSize.height - 100));
+
+	   this->addChild(avQuizesLbl, 1);
     return true;
 }
 

@@ -28,6 +28,7 @@
 
 #include "../BaseClasses/UIWidget.h"
 #include "../Layouts/UILayout.h"
+#include "../Layouts/UILayoutDefine.h"
 #include "../UIWidgets/UIButton.h"
 #include "../UIWidgets/UICheckBox.h"
 #include "../UIWidgets/UIImageView.h"
