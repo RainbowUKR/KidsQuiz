@@ -129,6 +129,8 @@
     <ClCompile Include="..\Classes\LevelParser.cpp" />
     <ClCompile Include="GroundSprite.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainMenuScene.cpp" />
+    <ClCompile Include="QuizObject.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
@@ -137,6 +139,8 @@
     <ClInclude Include="..\Classes\LevelParser.h" />
     <ClInclude Include="GroundSprite.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="MainMenuScene.h" />
+    <ClInclude Include="QuizObject.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\cocos2dx\proj.win32\cocos2d.vcxproj">
