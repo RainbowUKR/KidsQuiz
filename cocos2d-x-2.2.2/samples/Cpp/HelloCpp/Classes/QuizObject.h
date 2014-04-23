@@ -12,7 +12,17 @@ public:
 	QuizObject(std::string question, std::string answer);
 	~QuizObject();
 
-	void FindCharIndexesInAnswer(int*& indexes, int& size, char ch); //if not found,will return -1.If found,will return 
+	void FindCharIndexesInAnswer(int*& indexes, int& size, char ch);
+
+	inline const std::string& GetQuestion() const
+	{
+		return question;
+	}
+
+	inline const std::string& GetAnswer() const
+	{
+		return answer;
+	}
 
 private:
 

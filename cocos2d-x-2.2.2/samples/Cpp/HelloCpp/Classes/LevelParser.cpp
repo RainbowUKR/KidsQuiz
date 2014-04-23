@@ -3,6 +3,7 @@
 #include "..\extensions\CocoStudio\Json\rapidjson\prettywriter.h"
 #include "..\extensions\CocoStudio\Json\rapidjson\rapidjson.h"
 #include "CCFileUtilsWin32.h"
+#include "QuizObject.h"
 USING_NS_CC;
 using namespace rapidjson;
 
@@ -45,4 +46,15 @@ void LevelParser::GetQuizesFromJson(const char* fileName)
 			quizes.push_back(quizPair);
 		}
   }
+}
+
+QuizObject* LevelParser::GetRandomQuiz()
+{
+	srand(time(NULL));
+	int quizIndex = rand() % quizes.size();
+
+	std::shared_ptr<QuizObject> pQuiz;
+	pQuiz.reset(new QuizObject(quizes[quizIndex].first, quizes[quizIndex].second));
+
+	return pQuiz.get();
 }

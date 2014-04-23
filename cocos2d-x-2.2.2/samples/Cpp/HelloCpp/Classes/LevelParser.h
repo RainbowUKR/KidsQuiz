@@ -3,6 +3,8 @@
 #include "include\cocos2d.h"
 USING_NS_CC;
 
+class QuizObject;
+
 class LevelParser
 {
 public:
@@ -15,6 +17,8 @@ public:
 	{
 		return quizes.size();
 	}
+	
+	QuizObject* GetRandomQuiz();
 
 private:
 	std::vector<std::pair<std::string, std::string>> quizes;

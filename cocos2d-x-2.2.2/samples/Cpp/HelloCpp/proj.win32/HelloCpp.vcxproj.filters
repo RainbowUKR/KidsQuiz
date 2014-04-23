@@ -15,6 +15,9 @@
     <Filter Include="Classes\Scenes">
       <UniqueIdentifier>{9a7a6294-70b9-42a5-b5f0-9aac8e644bcf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes\SceneManager">
+      <UniqueIdentifier>{85a372e2-9fed-407b-9c86-b5acfb3b7e47}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp">
@@ -29,14 +32,20 @@
     <ClCompile Include="GroundSprite.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
-    <ClCompile Include="QuizObject.cpp">
-      <Filter>Classes\QuizObject</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\HelloWorldScene.cpp">
       <Filter>Classes\Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="MainMenuScene.cpp">
+    <ClCompile Include="..\Classes\QuizObject.cpp">
+      <Filter>Classes\QuizObject</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MainMenuScene.cpp">
       <Filter>Classes\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameScene.cpp">
+      <Filter>Classes\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SceneManager.cpp">
+      <Filter>Classes\SceneManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -55,14 +64,20 @@
     <ClInclude Include="GroundSprite.h">
       <Filter>Classes</Filter>
     </ClInclude>
-    <ClInclude Include="QuizObject.h">
-      <Filter>Classes\QuizObject</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\HelloWorldScene.h">
       <Filter>Classes\Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="MainMenuScene.h">
+    <ClInclude Include="..\Classes\QuizObject.h">
+      <Filter>Classes\QuizObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MainMenuScene.h">
       <Filter>Classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameScene.h">
+      <Filter>Classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SceneManager.h">
+      <Filter>Classes\SceneManager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

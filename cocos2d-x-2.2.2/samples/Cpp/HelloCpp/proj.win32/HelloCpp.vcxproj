@@ -125,22 +125,26 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\GameScene.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
     <ClCompile Include="..\Classes\LevelParser.cpp" />
+    <ClCompile Include="..\Classes\MainMenuScene.cpp" />
+    <ClCompile Include="..\Classes\QuizObject.cpp" />
+    <ClCompile Include="..\Classes\SceneManager.cpp" />
     <ClCompile Include="GroundSprite.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MainMenuScene.cpp" />
-    <ClCompile Include="QuizObject.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\AppMacros.h" />
+    <ClInclude Include="..\Classes\GameScene.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
     <ClInclude Include="..\Classes\LevelParser.h" />
+    <ClInclude Include="..\Classes\MainMenuScene.h" />
+    <ClInclude Include="..\Classes\QuizObject.h" />
+    <ClInclude Include="..\Classes\SceneManager.h" />
     <ClInclude Include="GroundSprite.h" />
     <ClInclude Include="main.h" />
-    <ClInclude Include="MainMenuScene.h" />
-    <ClInclude Include="QuizObject.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\cocos2dx\proj.win32\cocos2d.vcxproj">
